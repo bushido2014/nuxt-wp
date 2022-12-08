@@ -32,7 +32,8 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Home page description',
+          content:
+            'Website  Development, Vue, Nuxt.js and WordPress Related Articles Related Articles, Tips , Web Hosting deals coupons and more.',
         },
       ],
     };
