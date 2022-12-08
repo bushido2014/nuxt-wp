@@ -1,7 +1,7 @@
 <template>
   <div class="icon-wrapp">
     <IconHtml />
-    <!-- <IconCss />
+    <IconCss />
     <IconBootstrap />
     <IconTailwind />
     <IconJs />
@@ -9,6 +9,6 @@
     <IconVue />
     <IconNuxt />
     <IconPhp />
-    <IconWordpress /> -->
+    <IconWordpress />
   </div>
 </template>
