@@ -1,6 +1,7 @@
 <template>
   <section class="all-projects">
     <div class="container">
+      gg
       <div v-if="projects" class="project-wrapper grid">
         <ProjectCard
           v-for="(project, i) in projects"
@@ -18,8 +19,10 @@ export default {
   components: { ProjectCard },
   async getAllProjects({ $axios }) {
     const projects = await $axios.$get('/wp-json/wp/v2/project');
+    console.log(projects);
     return { projects };
   },
+
   head() {
     return {
       title: 'All Projects - Nuxt JS',
