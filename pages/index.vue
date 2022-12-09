@@ -38,27 +38,10 @@ import Skills from '~/components/Skills';
 import ProjectList from '~/components/ProjectList';
 export default {
   components: { Hero, Skills, ProjectList },
-  async getProjects({ $axios }) {
-    const project = await $axios.$get('/wp-json/wp/v2/project?per_page=3');
-    return { project };
-  },
-  head() {
-    return {
-      title: 'Viorel Soltan - Front End Developer',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Website with Nuxt.js and WordPress REST API',
-        },
-      ],
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://dev-websoltan.com' + this.$route.path,
-        },
-      ],
-    };
+
+  async getProjectsList({ $axios }) {
+    const projects = await $axios.$get('/wp-json/wp/v2/project?per_page=3');
+    return { projects };
   },
 };
 </script>
