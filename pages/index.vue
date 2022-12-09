@@ -9,7 +9,7 @@
         <Skills />
       </div>
     </section>
-    <!-- <section class="home-projects">
+    <section class="home-projects">
       <div class="section_title">
         <h1>Projects</h1>
       </div>
@@ -25,19 +25,21 @@
           </nuxt-link>
         </div>
         <div class="project-list-link">
-          <nuxt-link to="/project" class="button">View All Projects </nuxt-link>
+          <nuxt-link to="/projects" class="button"
+            >View All Projects
+          </nuxt-link>
         </div>
       </div>
-    </section> -->
+    </section>
   </div>
 </template>
 
 <script>
 import Hero from '~/components/Hero';
 import Skills from '~/components/Skills';
-//import ProjectList from '~/components/ProjectList';
+import ProjectList from '~/components/ProjectList';
 export default {
-  components: { Hero, Skills },
+  components: { Hero, Skills, ProjectList },
 
   // async getProjectsList({ $axios }) {
   //   const projects = await $axios.$get('/wp-json/wp/v2/project?per_page=3');
