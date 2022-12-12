@@ -41,7 +41,7 @@ import ProjectList from '~/components/ProjectList';
 export default {
   components: { Hero, Skills, ProjectList },
 
-  async getProjectsList({ $axios }) {
+  async asyncData({ $axios }) {
     const projects = await $axios.$get('/wp-json/wp/v2/project?per_page=3');
 
     return { projects };
