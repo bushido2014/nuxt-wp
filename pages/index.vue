@@ -18,7 +18,7 @@
           <nuxt-link
             v-for="(project, i) in projects"
             :key="i"
-            :to="`/project/${project.slug}/`"
+            :to="`/projects/${project.slug}/`"
             class="project-list__card"
           >
             <ProjectList :project="project" :no-text="true" />
@@ -43,6 +43,7 @@ export default {
 
   async getProjectsList({ $axios }) {
     const projects = await $axios.$get('/wp-json/wp/v2/project?per_page=3');
+
     return { projects };
   },
 };

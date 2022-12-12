@@ -20,6 +20,7 @@ export default {
     const projects = await $axios.$get('/wp-json/wp/v2/project');
     return { projects };
   },
+
   head() {
     return {
       title: 'All Projects - Nuxt JS',

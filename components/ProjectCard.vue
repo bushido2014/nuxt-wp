@@ -11,7 +11,10 @@
     </div>
     <div class="project-footer">
       <nuxt-link
-        :to="{ name: 'projects-slug', params: { slug: project.slug } }"
+        :to="{
+          name: 'projects-slug',
+          params: { slug: project.slug },
+        }"
         class="button"
       >
         View Project
