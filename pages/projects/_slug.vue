@@ -31,7 +31,7 @@ export default {
       return error({ statusCode: 404, message: 'Page not found' });
     }
     console.log(project[0]);
-    return { project: project[0] };
+    return { project };
   },
 
   head() {

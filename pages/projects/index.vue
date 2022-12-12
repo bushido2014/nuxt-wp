@@ -18,6 +18,7 @@ export default {
   components: { ProjectCard },
   async asyncData({ $axios }) {
     const projects = await $axios.$get('/wp-json/wp/v2/project');
+    console.log(projects[0]);
     return { projects };
   },
 
