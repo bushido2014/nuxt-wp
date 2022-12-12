@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  props: ['projects'],
+  props: ['project'],
 };
 </script>

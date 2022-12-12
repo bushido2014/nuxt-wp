@@ -5,7 +5,6 @@
         <ProjectCard
           v-for="(project, i) in projects"
           :key="i"
-          class=""
           :project="project"
         />
       </div>
