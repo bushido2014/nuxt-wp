@@ -25,7 +25,7 @@
 export default {
   async asyncData({ $axios, params, error }) {
     const project = await $axios.$get(
-      '/wp-json/wp/v2/project/?slug=' + params.slug + '&_embed=1'
+      '/wp-json/wp/v2/projects/?slug=' + params.slug + '&_embed=1'
     );
     if (project.length <= 0) {
       return error({ statusCode: 404, message: 'Page not found' });
