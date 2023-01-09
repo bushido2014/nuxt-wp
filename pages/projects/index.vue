@@ -17,7 +17,7 @@ import ProjectCard from '~/components/ProjectCard';
 export default {
   components: { ProjectCard },
   async asyncData({ $axios }) {
-    const projects = await $axios.$get('/wp-json/wp/v2/project');
+    const projects = await $axios.$get('/wp-json/wp/v2/projects');
     console.log(projects[0]);
     return { projects };
   },
