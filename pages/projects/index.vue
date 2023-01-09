@@ -13,29 +13,29 @@
 </template>
 
 <script>
-import ProjectCard from '~/components/ProjectCard';
+import ProjectCard from "~/components/ProjectCard";
 export default {
   components: { ProjectCard },
   async asyncData({ $axios }) {
-    const projects = await $axios.$get('/wp-json/wp/v2/project');
+    const projects = await $axios.$get("/wp-json/wp/v2/projects");
     console.log(projects[0]);
     return { projects };
   },
 
   head() {
     return {
-      title: 'All Projects - Nuxt JS',
+      title: "All Projects - Nuxt JS",
       meta: [
         {
-          hid: 'description',
-          name: 'description',
-          content: 'Website  Development, Vue, Nuxt.js and WordPress',
+          hid: "description",
+          name: "description",
+          content: "Website  Development, Vue, Nuxt.js and WordPress",
         },
       ],
       link: [
         {
-          rel: 'canonical',
-          href: 'https://dev-websoltan.com' + this.$route.path,
+          rel: "canonical",
+          href: "https://dev-websoltan.com" + this.$route.path,
         },
       ],
     };
