@@ -42,7 +42,7 @@ export default {
   components: { Hero, Skills, ProjectList },
 
   async asyncData({ $axios }) {
-    const projects = await $axios.$get('/wp-json/wp/v2/project?per_page=3');
+    const projects = await $axios.$get('/wp-json/wp/v2/projects?per_page=3');
 
     return { projects };
   },
